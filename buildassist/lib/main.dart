@@ -41,19 +41,7 @@ class _LoginPageState extends State<LoginPage> {
     final screenHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      backgroundColor: const Color(0xFF2C2C2C), // Dark background color
-      appBar: AppBar(
-        title: Text(
-          'Main Login',
-          style: GoogleFonts.poppins(
-            fontWeight: FontWeight.w600,
-            color: Colors.white,
-          ),
-        ),
-        backgroundColor: const Color(0xFF2C2C2C),
-        elevation: 0, // No shadow
-        centerTitle: true,
-      ),
+      
       body: SafeArea(
         child: ClipRRect(
           // Apply rounded corners to the main content area
@@ -73,7 +61,7 @@ class _LoginPageState extends State<LoginPage> {
                     Center(
                       child: Image.network(
                         // A placeholder image that resembles the one in the screenshot
-                        'https://i.imgur.com/2y90deV.png',
+                        'https://scontent.fcmb1-2.fna.fbcdn.net/v/t39.30808-1/506638615_122155613840429126_1163971712497134535_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=107&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeHs3M87N78RpMHtAiuD3ErpjKMikRwAzjyMoyKRHADOPI_88U0PoB2jA68F6jhuEHDQI42F5_jq95rmcX92_TNo&_nc_ohc=msxAkeIQIroQ7kNvwFhLExy&_nc_oc=AdlOGoDyrT2hDMXbHFFTdcUkVuMnqoBjfKKpGSbQGdAA9pq70M6VZ_by6gz_-QVFOUU&_nc_zt=24&_nc_ht=scontent.fcmb1-2.fna&_nc_gid=L2ZfnwmHlnQ4GibKFWlThg&oh=00_AfcbHpNJQLKpF1xQ-arHFKjvumaB_dhvTq3-fyN0YNGiaA&oe=68EA6B1C',
                         height: screenHeight * 0.22,
                         errorBuilder: (context, error, stackTrace) =>
                             Icon(Icons.error, size: screenHeight * 0.22),
