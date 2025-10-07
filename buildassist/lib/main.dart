@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'District_Engineer/district_engineer_signup.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme),
       ),
       // Set the LoginPage as the home screen of the app
-      home: const LoginPage(),
+      home: const DistrictEngineerSignup(),
     );
   }
 }
