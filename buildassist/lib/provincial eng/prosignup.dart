@@ -318,7 +318,7 @@ class _SignupScreenState extends State<SignupScreen> {
   }) {
     // State is managed locally within the widget for simplicity, but in a real app,
     // you'd typically manage it using a state management solution or a dedicated stateful widget.
-    bool _isObscure = true;
+    bool isObscure = true;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -335,17 +335,17 @@ class _SignupScreenState extends State<SignupScreen> {
         StatefulBuilder(
           builder: (context, setState) {
             return TextFormField(
-              obscureText: _isObscure,
+              obscureText: isObscure,
               decoration: InputDecoration(
                 hintText: hint,
                 suffixIcon: IconButton(
                   icon: Icon(
-                    _isObscure ? Icons.visibility_off_outlined : Icons.visibility_outlined,
+                    isObscure ? Icons.visibility_off_outlined : Icons.visibility_outlined,
                     color: Colors.grey,
                   ),
                   onPressed: () {
                     setState(() {
-                      _isObscure = !_isObscure;
+                      isObscure = !isObscure;
                     });
                   },
                 ),
@@ -383,7 +383,7 @@ class _SignupScreenState extends State<SignupScreen> {
         ),
         const SizedBox(height: 5),
         DropdownButtonFormField<String>(
-          value: value,
+          initialValue: value,
           icon: const Icon(Icons.arrow_drop_down, color: Colors.white), // Custom icon color
           decoration: const InputDecoration(
             // Reuses the styling defined in ThemeData
